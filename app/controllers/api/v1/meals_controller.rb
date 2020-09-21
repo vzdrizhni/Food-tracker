@@ -10,11 +10,4 @@ class Api::V1::MealsController < ApplicationController
             json_response "Something is wrong", false, {}, :unauthorized
         end
     end
-    
-    private
-
-    def meal_params
-        params.require(:meal)
-    end
-    
 end
