@@ -8,8 +8,8 @@ Rails.application.routes.draw do
         post "sign_in", to: "sessions#create"
         delete "log_out", to: "sessions#destroy"
       end
-      resources :meals, only: [:create] do
-        resources :foods, only: [:create]
+      resources :meals, only: [:create, :show] do
+        resources :foods, only: [:create, :show]
       end
     end
   end
