@@ -1,6 +1,6 @@
-class API::V1::RegistrationsController < Devise::RegistrationsController
+class Api::V1::RegistrationsController < Devise::RegistrationsController
     before_action :ensure_params, only: :create
-    
+
     def create
         user = User.new(user_params)
         if user.save
@@ -25,9 +25,13 @@ class API::V1::RegistrationsController < Devise::RegistrationsController
     def user_params
         params.require(:user).permit(:email, :password)
     end
-    
+
     def ensure_params
         return if params[:user].present?
-        json_response "Missing params", false, {}, :bad_request
+        render json: {
+            messages: "Missing params",
+            is_success: false,
+            data: {}
+            }, status: :bad_request
     end
 end
