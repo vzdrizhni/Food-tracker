@@ -9,4 +9,6 @@ class User < ApplicationRecord
     token = User.generate_unique_secure_token
     update_attributes authentication_token: token
   end
+
+  has_many :meals, foreign_key: "meal_id"
 end
