@@ -10,5 +10,5 @@ class User < ApplicationRecord
     update_attributes authentication_token: token
   end
 
-  has_many :meals, foreign_key: "meal_id"
+  has_many :meals, foreign_key: "user_id"
 end
