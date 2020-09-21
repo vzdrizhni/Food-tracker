@@ -2,7 +2,7 @@ class Api::V1::FoodsController < ApplicationController
     def show
         food = Food.find params[:id]
         food_serializer = parse_json food
-        json_response "Meal showed!", true, {meal: food_serializer}, :ok
+        json_response "Food showed!", true, {food: food_serializer}, :ok
     end
 
     def create
