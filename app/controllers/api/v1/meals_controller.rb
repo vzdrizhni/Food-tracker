@@ -1,4 +1,6 @@
 class Api::V1::MealsController < ApplicationController
+    before_action :authenticate_with_token!, only: [:create]
+
     def create
         meal = Meal.new()
         meal.user_id = current_user.id
