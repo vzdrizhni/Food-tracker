@@ -1,5 +1,11 @@
 class Api::V1::MealsController < ApplicationController
-    before_action :authenticate_with_token!, only: [:create]
+    before_action :authenticate_with_token!, only: [:create, :index]
+
+    def index
+        meals = Meal.all.where(user_id: current_user.id)
+        meal_serializer = parse_json meals
+        json_response "Meal showed!", true, {meal: meal_serializer}, :ok
+    end
 
     def show
         meal = Meal.find params[:id]
