@@ -4,7 +4,6 @@ class MealSerializer < ActiveModel::Serializer
   has_many :foods
 
   def created
-    object.created_at.strftime("%d of %B, %Y")
+    object.created_at.strftime('%d of %B, %Y')
   end
-
 end

@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   describe '#validations' do
     it 'should test that the factory is valid' do
-      expect(build :user).to be_invalid
+      expect(build(:user)).to be_invalid
     end
 
     it 'should validate the presence of the emal' do
