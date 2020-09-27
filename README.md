@@ -55,7 +55,7 @@
 ## About The Project
   The Food-tracker is a back-end application that responses with json files with certain URL adress.
 
-![screenshot-1](assets/screenshot.PNG)
+![screenshot-1](assets/Screenshot.PNG)
 
 ### Built With
 This project was built using these technologies.
