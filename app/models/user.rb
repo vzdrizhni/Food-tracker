@@ -11,4 +11,5 @@ class User < ApplicationRecord
   end
 
   has_many :foods, foreign_key: 'user_id', dependent: :destroy
+  has_many :meals, foreign_key: 'user_id', dependent: :destroy
 end
