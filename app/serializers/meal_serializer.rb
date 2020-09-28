@@ -1,6 +1,5 @@
 class MealSerializer < ActiveModel::Serializer
   attributes :id, :created
-  belongs_to :user
   has_many :foods
 
   def created
