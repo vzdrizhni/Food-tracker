@@ -53,18 +53,15 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-  The Food-tracker is a back-end application that responses with json files with certain URL adress.
+  The Food-tracker is a back-end application that responses with json files with certain URL adress. It handles user registration and sessions process. Also it stores and processes all the data created by user.
 
-![screenshot-1](assets/screenshot.PNG)
+![screenshot-1](assets/Screenshot.PNG)
 
 ### Built With
 This project was built using these technologies.
-* HTML/CSS
-* ReactJs
-* JavaScript
+* Ruby on Rails
 * Heroku Buildpack
-* ESLint
-* StyleLint
+* Rubocop
 * GithubActions :muscle:
 
 <!-- INSTALLATION -->
@@ -83,36 +80,14 @@ To have this app on your pc, you need to:
 
 * In the project directory, you can run:
 
-  - `$ yarn install` - installs all the dependencies required by the project
+  - `$ bundle` - installs all the dependencies required by the project
 
-  - `$ yarn start` - runs the app in the development mode:
-    - Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-    - The page will reload if you make edits.
-    - You will also see any lint errors in the console.
-
-  - `$ yarn test`
-    - Launches the test runner in the interactive watch mode.
-    - See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-  - `$ yarn build`
-    - Builds the app for production to the `build` folder.
-    - It correctly bundles React in production mode and optimizes the build for the best performance.
-    - The build is minified and the filenames include the hashes.
-    - Your app is ready to be deployed!
+  - `$ rails s` - runs the app in the development mode:
+    - To see the result of the application I would recommend tools such Insomnia or Postman. 
 
 ## Automated Test
- - `$ yarn test`
+ - `$ bundle exec rspec`
     - Launches the test runner in the interactive watch mode.<br />
-    - See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-## Live Demo & Deployment
-The project has been deployed with Github Pages.
-
-[Heroku Live Demo Link](https://vzdrizhni.github.io/Food-tracker/) :point_left:
-
-## WalkThrough Video:
-https://www.loom.com/share/247c5bf9e10e4c40a41de4c2a186b64f
-
 
 <!-- CONTACT -->
 ## Contributors
